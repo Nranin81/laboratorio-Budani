@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="./assets/img/favico.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans:wght@600;800&display=swap" rel="stylesheet">
   <title>Umbrella Corp</title>
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -28,7 +29,7 @@
     <main>
       <section class="tituloLaboratorio">
         <h1>Umbrella Corporation</h1>
-        <h4>Trabajamos para preservar la salud de la gente.</h4>
+        <h4 class="animate__animated animate__tada" >Trabajamos para preservar la salud de la gente.</h4>
       </section>
       <section class="boxImagenes">
           <img src="assets/img/laboratorio1.jpg" alt="laboratorio umbrella" class="imagenesCentro">
@@ -50,6 +51,10 @@
         </a>
       </div>
     </footer>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </div>
 </body>
 </html>
