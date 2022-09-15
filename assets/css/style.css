@@ -29,12 +29,31 @@ h1{
   color: #ae2626;
   text-align: center;
   padding-top: 2%;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count:initial;
 }
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    }
+  50% {
+      opacity: 1;
+      }
+  100% {
+    opacity: 0;
+      }
+}
+
 h4{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.2rem;
   color: black;
   text-align: center;
+  /*Estilos para la animación*/
+  margin: 0 0.5rem;
+  animation-duration: 5s; /* don't forget to set a duration! */
+  
 }
 li {
 	display: inline; /* esto cambia el valor por defecto de bloque a en linea */
@@ -60,10 +79,21 @@ nav {
   padding-bottom: 3%;
   text-align: center;
 }
+section.textoInicial {
+  transition: 2s;       
+}
+section.textoInicial:hover {
+  background-color: #e39c44;
+}
 .imagenesCentro{
-  width: 500px;
   padding: 5px;
-  height: 300px;
+  width: 30vw;
+  height: 40vh;
+
+}
+img.imagenesCentro:hover{
+  transform: skew(5deg);;
+ 
 }
 .textoInicial{
   border: dashed 1px black; /* aplicar borde : estilo, grosor y color */
