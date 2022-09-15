@@ -1,0 +1,199 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url('../assets/img/fondo.svg');
+}
+/* usar una font */
+@font-face {
+	font-family: 'Alumni Sans Pinstripe', sans-serif;
+	src: url('../assets/font/AlumniSansPinstripe.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans:wght@600&display=swap');
+.contenedor{
+	display: grid;
+	grid-template-areas: 
+	"header header header"
+	"tituloLaboratorio tituloLaboratorio"
+	"boxImagenes boxImagenes"
+	"textoInicial textoInicial"
+	"footer footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 120px 1fr auto 100px;
+}
+h1{
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 4.2rem;
+  color: #ae2626;
+  text-align: center;
+  padding-top: 2%;
+}
+h4{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+}
+li {
+	display: inline; /* esto cambia el valor por defecto de bloque a en linea */
+	padding: 10px;
+	margin: 5px;
+}
+.secciones{
+  color: antiquewhite;
+  text-decoration: none;
+}
+nav {
+	position: relative;
+  font-family: 'Alumni Sans', sans-serif;
+  margin: 2px 2px 15px 2px;
+  padding: 5px;
+  font-size: 1.2rem;
+  background-color: #c43225;
+  line-height: 1.2;
+  text-align: right;
+}
+.boxImagenes{
+  padding-top: 2%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+.imagenesCentro{
+  width: 500px;
+  padding: 5px;
+  height: 300px;
+}
+.textoInicial{
+  border: dashed 1px black; /* aplicar borde : estilo, grosor y color */
+  font-family:Verdana, Geneva, Tahoma, sans-serif; /*Otra tipografia/font */
+	font-size: 1rem; /* tamaño de letra */
+	overflow: hidden; /* ocultar excedente dado por el espacio que ocupa el contenido*/
+  width: 100vw; /* ancho de tu div */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p{
+	text-align: center;
+}
+.iconoPequeno{
+  width: 80px;
+  padding: 1px;
+  margin: 2px;
+}
+.linea{
+  margin-top: 25px;
+  padding: 10px;
+  border-top: solid 0.5px black;
+  text-align: center;
+}
+.textoFooter{
+  display: inline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding-top: 2px;
+}
+.iconoRedes{
+  width: 22px;
+  height: 22px;
+}
+.texto{
+  font-size: 1rem;
+  padding: 30px 200px 30px 200px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.estiloVideo{
+  text-align: center;
+  border: groove 0.5px white;
+  padding: 30px;
+  margin: 50px;
+  display: inline-block;
+}
+.textoLateral{
+  padding: 10px 20px 30px 10px;
+  font-style: normal;
+  font-size: 0.9rem;
+  display: inline;
+
+}
+table{
+  border: 2px solid black;
+  text-align: center;
+}
+.imagenesTestimonios{
+  width: 300px;
+  padding: 5px;
+  height: 200px;
+}
+.tablasCentradas{
+  text-align: center;
+  padding-left: 400px;
+}
+.elementoCentrado{
+  text-align: center;
+}
+.imagenenMediana{
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+.imagenesProductos{
+  width: 100px;
+  padding: 15px 50px 5px 50px;
+  height: 100px;
+}
+.listaDesordenada{
+  list-style: square inside;
+}
+.video{
+  width: 560px;
+  height: 315px;
+}
+/*query para vista mobile*/
+@media only screen and (min-width:0px) and (max-width:767px){
+	.contenedor{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "tituloLaboratorio"
+    "boxImagenes"
+    "textoInicial"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr auto 50ox 50px;
+  }
+
+  header{
+    grid-area: header;
+    display: flex;
+  }
+  header img {
+    padding: 3%;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    font-size: 1.2rem;
+    list-style-type: none;
+    position: relative;
+  }
+  section.tituloLaboratorio{
+    grid-area: tituloLaboratorio;
+  }
+
+  section.boxImagenes{
+    grid-area: boxImagenes;
+  }
+
+  section.textoInicial{
+    grid-area: textoInicial;
+  }
+  footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+  }
+}
