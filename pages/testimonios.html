@@ -8,8 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans:wght@600;800&display=swap" rel="stylesheet">
-  <title>Umbrella Corp</title>
+  <!-- Link Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Mis estilos-->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Umbrella Corp</title>
 </head>
 <body>
   <header>
@@ -53,20 +56,21 @@
     </section>
     <section class="textoInformativo">
       <h4>Trabajá con nosotros!</h4>
-      <form action="">
-        <label for="nombre">
-            <span>Nombre completo: </span>
-            <input type="text" id="nombre" placeholder="Nombre completo">
-        </label>
-        <label for="email">
-            <span>E-mail de contacto: </span>
-            <input type="email" id="mail" placeholder="E-mail">
-        </label>
-        <label for="experienciaLaboral">
-            <span>Contanos tus experiencias laborales: </span>
-            <textarea name="experiencia"></textarea>
-        </label>
-        <input type="submit" value="Enviar">
+      <form action="" class="col-sm-6 align-items-center">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Juan Perez">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electronico</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="jperez@example.com">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Experiencia laboral" id="experienciaLaboral"></textarea>
+          <label for="experienciaLaboral">Tu experiecia laboral</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </section>
   </main>
@@ -78,5 +82,7 @@
       </a>
     </div>
   </footer>
+  <!-- JavaScript bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

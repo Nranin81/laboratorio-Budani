@@ -8,8 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans:wght@600;800&display=swap" rel="stylesheet">
-  <title>Umbrella Corp</title>
+  <!-- Link Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Mis estilos-->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Umbrella Corp</title>
 </head>
 <body>
   <header>
@@ -25,13 +28,13 @@
     </nav>
   </header>
   <main>
-    <section>
-      <table>
+    <div class="table-responsive">
+      <table class="table">
         <tr>
-          <th><img src="../assets/img/producto1.jpg" alt="suero amarillo" class="imagenesProductos"></th>
-          <th><img src="../assets/img/producto2.jpg" alt="suero gotero" class="imagenesProductos"></th>
-          <th><img src="../assets/img/producto3.jpg" alt="suero rojo" class="imagenesProductos"></th>
-          <th><img src="../assets/img/producto4.jpg" alt="kit sueros" class="imagenesProductos"></th>
+          <th scope="col"><img src="../assets/img/producto1.jpg" alt="suero amarillo" class="img-thumbnail"></th>
+          <th scope="col"><img src="../assets/img/producto2.jpg" alt="suero gotero" class="img-thumbnail"></th>
+          <th scope="col"><img src="../assets/img/producto3.jpg" alt="suero rojo" class="img-thumbnail"></th>
+          <th scope="col"><img src="../assets/img/producto4.jpg" alt="kit sueros" class="img-thumbnail"></th>
         </tr>
         <tr>
           <td><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et rutrum augue. Donec dapibus tempor molestie. Ut eleifend in augue ut egestas.</p></td>
@@ -40,7 +43,7 @@
           <td><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et rutrum augue. Donec dapibus tempor molestie. Ut eleifend in augue ut egestas.</p></td>
         </tr>
       </table>
-    </section>
+    </div>
     <section class="elementoCentrado">
       <img src="../assets/img/promo-umbrella.jpg" alt="fondo celeste umbrella" class="imagenenMediana">
       <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et rutrum augue. Donec dapibus tempor molestie. Ut eleifend in augue ut egestas.
@@ -61,5 +64,7 @@
       </a>
     </div>
   </footer>
+  <!-- JavaScript bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
