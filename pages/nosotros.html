@@ -17,15 +17,24 @@
 <body>
   <div class="contenedor">
     <header>
-      <img src="../assets/img/umbrella-icon.png" alt="icono" class="iconoPequeno">
-      <nav class="nav">
-        <ul>
-          <li><a href="../index.html" class="secciones">Inicio</a></li>
-          <li><a href="./nosotros.html" class="secciones">Nosotros</a></li>
-          <li><a href="./productos.html" class="secciones">Productos</a></li>
-          <li><a href="./testimonios.html" class="secciones">Testimonios</a></li>
-          <li><a href="./ciudadracoon.html" class="secciones">Racoon City</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg colorNavbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/img/umbrella-icon.png" alt="icono umbrella" width="50" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav me-auto mb-2 mb-lg-0">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link active" href="./nosotros.html">Nosotros</a>
+              <a class="nav-link" href="./productos.html">Productos</a>
+              <a class="nav-link" href="./testimonios.html">Testimonios</a>
+              <a class="nav-link" href="./ciudadracoon.html">Racoon City</a>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <section class="tituloLaboratorio">
@@ -37,14 +46,11 @@
         <img src="../assets/img/promo-umbrella.jpg" alt="fondo azul umbrella" class="imgCentro">
       </section>
       <section class="textoInicial">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et rutrum augue. 
-          Donec dapibus tempor molestie. Ut eleifend in augue ut egestas. 
-          Vivamus ornare eros vel lectus euismod, in pulvinar nibh ullamcorper. 
-          Morbi ligula nulla, venenatis eu sem eget, ullamcorper feugiat magna. 
-          Vivamus vitae velit ex. Nulla tincidunt vel lectus feugiat rutrum. 
-          Maecenas et arcu in enim mollis pulvinar nec non diam. Aenean vitae felis non mi accumsan lobortis. 
-          Quisque at augue in lectus tempus porttitor. Sed consectetur fermentum eros et posuere.
+        <p class="align-content-center">
+          <i>Compromiso, honradez, integridad... Estos son los valores clave que forman los cimientos de la corporación Umbrella.</i>
+          Nuestra corporación es, una de las principales proveedoras de tecnología de computadoras, 
+          productos médicos y sistemas de salud.
+          Tenemos más de 60 años en la industria <strong>¡Confíe en nosotros!</strong>
         </p>
       </section>
     </main>
