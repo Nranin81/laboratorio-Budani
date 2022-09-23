@@ -105,7 +105,7 @@ p{
 }
 .texto{
   font-size: 1rem;
-  padding: 30px 200px 30px 200px;
+  padding: 5%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .estiloVideo{
@@ -162,6 +162,12 @@ table{
   width: 75%;
   height: 50%;
 }
+.imgCentro{
+  width: 30%;
+  height: 25%;
+  display: flexbox;
+  flex-wrap: nowrap;
+}
 @media only screen and (min-width: 0px) and (max-width:767px){
   th{
     display: flex;
@@ -200,5 +206,9 @@ table{
   }
   .imgTablas{
     width: 50%;
+  }
+  .texto{
+    text-align: center;
+    width: auto;
   }
 }
