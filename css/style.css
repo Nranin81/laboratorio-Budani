@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("../assets/img/fondo.svg"); }
+
+/*importo una hoja de estilo con sass*/
+.seccionStars {
+  background: #7eb6c5; }
+  .seccionStars .stars {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large; }
+    .seccionStars .stars:hover {
+      color: #0000ff; }
+  .seccionStars .navStars {
+    background-color: #228585;
+    padding: 1%; }
+    .seccionStars .navStars div {
+      display: flex;
+      align-items: center; }
+      .seccionStars .navStars div img {
+        width: 50px;
+        height: 50px; }
+      .seccionStars .navStars div .secciones {
+        justify-content: space-around;
+        padding: 10px; }
+        .seccionStars .navStars div .secciones .nav-link {
+          color: #beb618;
+          padding: 5px; }
+  .seccionStars .divStars {
+    border: 1px solid #193e8e;
+    justify-items: center; }
+    .seccionStars .divStars h3 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+      font-size: 2rem;
+      font-style: normal; }
+      .seccionStars .divStars h3:hover {
+        font-style: italic; }
+    .seccionStars .divStars p {
+      font-size: medium; }
+      .seccionStars .divStars p:hover {
+        color: #922626; }
+  .seccionStars div {
+    text-align: center;
+    padding: 2%; }
+    .seccionStars div iframe {
+      width: 50vw;
+      height: 80vh; }
+
+/* Importacion de tipografia */
+@font-face {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  src: url("../assets/font/AlumniSansPinstripe.ttf"); }
+
+h1 {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 4.2rem;
+  color: #ae2626;
+  text-align: center;
+  padding-top: 2%;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: initial; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+  /*Estilos para la animación*/
+  margin: 0 0.5rem;
+  animation-duration: 5s;
+  /* don't forget to set a duration! */ }
+
+.secciones {
+  color: antiquewhite;
+  text-decoration: none; }
+
+.colorNavbar {
+  background: #c7675e; }
+
+a {
+  text-decoration: none;
+  color: #ee9323; }
+
+.boxImagenes {
+  padding-top: 2%;
+  padding-bottom: 3%;
+  text-align: center; }
+
+section.textoInicial {
+  transition: 2s; }
+
+section.textoInicial:hover {
+  background-color: #e39c44; }
+
+.imagenesCentro {
+  padding: 5px;
+  width: 30vw;
+  height: 40vh; }
+
+img.imagenesCentro:hover {
+  transform: skew(5deg); }
+
+.textoInicial {
+  border: dashed 1px black;
+  /* aplicar borde : estilo, grosor y color */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*Otra tipografia/font */
+  font-size: 1rem;
+  /* tamaño de letra */
+  overflow: hidden;
+  /* ocultar excedente dado por el espacio que ocupa el contenido*/
+  width: 100vw;
+  /* ancho de tu div */
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+p {
+  text-align: center; }
+
+.linea {
+  margin-top: 25px;
+  padding: 10px;
+  border-top: solid 0.5px black;
+  text-align: center; }
+
+.textoFooter {
+  display: inline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding-top: 2px; }
+
+.iconoRedes {
+  width: 22px;
+  height: 22px; }
+
+.texto {
+  font-size: 1rem;
+  padding: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.estiloVideo {
+  text-align: center;
+  border: groove 0.5px white;
+  padding: 30px;
+  margin: 50px;
+  display: inline-block; }
+
+.textoLateral {
+  padding: 10px 20px 30px 10px;
+  font-style: normal;
+  font-size: 0.9rem;
+  display: inline; }
+
+table {
+  border: 2px solid black;
+  text-align: center; }
+
+.imagenesTestimonios {
+  width: 15vw;
+  padding: 5%;
+  height: 22vh; }
+
+.tablasCentradas {
+  display: flex;
+  padding-left: 4%; }
+
+.elementoCentrado {
+  text-align: center; }
+
+.imagenenMediana {
+  width: 400vw;
+  height: 300vh;
+  text-align: center; }
+
+.imagenesProductos {
+  width: 100vw;
+  padding: 15px 50px 5px 50px;
+  height: 100vh; }
+
+.listaDesordenada {
+  list-style: square inside; }
+
+.video {
+  width: 560px;
+  height: 315px; }
+
+.listaGroup {
+  width: 50%;
+  padding: 5%; }
+
+.imgCentro {
+  width: 30%;
+  height: 25%;
+  display: flexbox;
+  flex-wrap: nowrap; }
+
+.col {
+  float: left;
+  padding: 10px; }
+
+.col img {
+  margin: 2%; }
+
+section.prod {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  th {
+    display: flex;
+    flex-wrap: wrap; }
+  td {
+    display: flex;
+    flex-wrap: wrap; }
+  .tablasCentradas {
+    display: flex;
+    flex-wrap: wrap; }
+  .imagenesTestimonios {
+    width: 28vw;
+    height: 15vh; }
+  .listMobile {
+    display: flex;
+    flex-wrap: nowrap; }
+  .video {
+    width: 50vw;
+    height: 20vh; }
+  .formCentrado {
+    display: flex;
+    flex-wrap: wrap; }
+  .imgCentro {
+    width: 75%;
+    height: 75%;
+    margin: 5%; }
+  .listaGroup {
+    width: 100%; }
+  .texto {
+    text-align: center;
+    width: auto; }
+  section.prod {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center; } }
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  th {
+    display: flex;
+    flex-wrap: wrap; }
+  td {
+    display: flex;
+    flex-wrap: wrap; }
+  .tablasCentradas {
+    display: flex;
+    flex-wrap: wrap; }
+  .imagenesTestimonios {
+    width: 28vw;
+    height: 15vh; }
+  .listMobile {
+    display: flex;
+    flex-wrap: nowrap; }
+  .video {
+    width: 50vw;
+    height: 20vh; }
+  .formCentrado {
+    display: flex;
+    flex-wrap: wrap; }
+  .imgCentro {
+    width: 75%;
+    height: 75%; }
+  .listaGroup {
+    width: 75%; }
+  .imgTablas {
+    width: 50%; }
+  .texto {
+    text-align: center;
+    width: auto; }
+  .listaGroup {
+    width: 75%; }
+  .col {
+    float: none;
+    padding: 10px; }
+  .col img {
+    margin: 2%; }
+  section.prod {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: repeat(4 1fr);
+    gap: 5px;
+    grid-template-areas: "col col" "col col";
+    justify-content: center;
+    align-items: center; } }

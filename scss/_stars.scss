@@ -1,0 +1,58 @@
+.seccionStars{
+  background: $fondo_color;
+  .stars{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    &:hover{
+      color: #0000ff;
+    }
+  }
+  .navStars{
+    background-color: $colornav_stars;
+    padding: 1%;
+    div{
+      display: flex;
+      align-items: center;
+      img{
+        width: 50px;
+        height: 50px;
+      }
+      .secciones{
+        justify-content: space-around;
+        padding: 10px;
+        .nav-link{
+          color: #beb618;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  .divStars{
+    border:  1px solid #193e8e;
+    justify-items: center;
+    h3{
+      font-family: $font_verdana;
+      text-align: center;
+      font-size: 2rem;
+      font-style:normal;
+      &:hover{
+        font-style: italic;
+      }
+    }
+    p{
+      font-size: medium;
+      &:hover{
+        color:#922626;
+      }
+    }
+  }
+  div{
+    text-align: center;
+    padding: 2%;
+    iframe{
+      width: 50vw;
+      height: 80vh;
+    }
+  }
+}
+

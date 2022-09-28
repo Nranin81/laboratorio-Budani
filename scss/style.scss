@@ -3,9 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+$fondo_color:#7eb6c5;
+$colornav_stars:#228585;
+$font_verdana: Verdana, Geneva, Tahoma, sans-serif;
 body{
-  background-image: url('../img/fondo.svg');
+  background-image: url('../assets/img/fondo.svg');
 }
+/*importo una hoja de estilo con sass*/
+@import "stars";
 /* Importacion de tipografia */
 @font-face {
 	font-family: 'Alumni Sans Pinstripe', sans-serif;
@@ -35,7 +40,7 @@ h1{
       }
 }
 h4{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $font_verdana;
   font-size: 1.2rem;
   color: black;
   text-align: center;
@@ -76,7 +81,7 @@ img.imagenesCentro:hover{
 }
 .textoInicial{
   border: dashed 1px black; /* aplicar borde : estilo, grosor y color */
-  font-family:Verdana, Geneva, Tahoma, sans-serif; /*Otra tipografia/font */
+  font-family:$font_verdana; /*Otra tipografia/font */
 	font-size: 1rem; /* tamaño de letra */
 	overflow: hidden; /* ocultar excedente dado por el espacio que ocupa el contenido*/
   width: 100vw; /* ancho de tu div */
@@ -95,7 +100,7 @@ p{
 }
 .textoFooter{
   display: inline;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $font_verdana;
   font-size: 1rem;
   padding-top: 2px;
 }
@@ -106,7 +111,7 @@ p{
 .texto{
   font-size: 1rem;
   padding: 5%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $font_verdana;
 }
 .estiloVideo{
   text-align: center;
@@ -156,11 +161,8 @@ table{
   height: 315px;
 }
 .listaGroup{
-  width: 25%;
-}
-.imgTablas{
-  width: 75%;
-  height: 50%;
+  width: 50%;
+  padding: 5%;
 }
 .imgCentro{
   width: 30%;
@@ -168,7 +170,69 @@ table{
   display: flexbox;
   flex-wrap: nowrap;
 }
-@media only screen and (min-width: 0px) and (max-width:767px){
+.col{
+  float: left;
+  padding: 10px;
+}
+.col img{
+  margin: 2%;
+}
+section.prod{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:0px) and (max-width:576px){
+  th{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  td{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tablasCentradas{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imagenesTestimonios{
+    width: 28vw;
+    height: 15vh;
+  }
+  .listMobile{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .video{
+    width: 50vw;
+    height: 20vh;
+  }
+  .formCentrado{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imgCentro{
+    width: 75%;
+    height: 75%;
+    margin: 5%;
+  }
+  .listaGroup{
+    width: 100%;
+  }
+  .texto{
+    text-align: center;
+    width: auto;
+  }
+  section.prod{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width:576px) and (max-width:768px){
   th{
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +266,7 @@ table{
     height: 75%;
   }
   .listaGroup{
-    width: 100%;
+    width: 75%;
   }
   .imgTablas{
     width: 50%;
@@ -211,4 +275,26 @@ table{
     text-align: center;
     width: auto;
   }
+  .listaGroup{
+    width: 75%;
+  }
+  .col{
+    float: none;
+    padding: 10px;
+  }
+  .col img{
+    margin: 2%;
+  }
+  section.prod{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-row: repeat(4 1fr);
+    gap: 5px;
+    grid-template-areas: 
+    "col col"
+    "col col";
+    justify-content: center;
+    align-items: center;
+  }
+  
 }

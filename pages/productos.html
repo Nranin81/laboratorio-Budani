@@ -11,7 +11,7 @@
   <!-- Link Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <!-- Mis estilos-->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Umbrella Corp</title>
 </head>
 <body>
@@ -37,45 +37,49 @@
     </nav>
   </header>
   <main>
-    <div class="table-responsive">
-      <table class="table">
-        <tr>
-          <th scope="col"><img src="../assets/img/producto1.jpg" alt="suero amarillo" class="img-thumbnail imgTablas"></th>
-          <th scope="col"><img src="../assets/img/producto2.jpg" alt="suero gotero" class="img-thumbnail imgTablas"></th>
-          <th scope="col"><img src="../assets/img/producto3.jpg" alt="suero rojo" class="img-thumbnail imgTablas"></th>
-          <th scope="col"><img src="../assets/img/producto4.jpg" alt="kit sueros" class="img-thumbnail imgTablas"></th>
-        </tr>
-        <tr>
-          <td><p>Nuestro serum está hecho para la salud de tu piel. Tener un cutis perfecto ¡Ahora es posible!</p></td>
-          <td><p>Con nuestras gotas de muestra pura ¡Podrás rejuvencer! Por dentro y por fuera. Con solo unas gotas al día, aseguramos que te sentiras mucho mejor.</p></td>
-          <td><p>Nuestro suero carmesí es para dolencias, si tienes algun dolor recurrente, artritis, cervical o dolores de cintura ¡Esta es la solución que buscabas!</p></td>
-          <td><p>¡Tambien puedes llevar nuestro kit completo! Juventud, salud y una mente despejada ¡Pruebalo!</p></td>
-        </tr>
-      </table>
-    </div>
-      <div class="list-group">
-        <div class="list-group-item list-group-item-action listaGroup">
+    <section class="prod">
+      <div class="col">
+        <img src="../assets/img/producto1.jpg" alt="suero amarillo" class="img-thumbnail imgTablas">
+        <p>Nuestro serum está hecho para la salud de tu piel. Tener un cutis perfecto ¡Ahora es posible!</p>
+      </div>
+      <div class="col">
+        <img src="../assets/img/producto2.jpg" alt="suero gotero" class="img-thumbnail imgTablas">
+        <p>Con nuestras gotas de muestra pura ¡Podrás rejuvencer!</p>
+      </div>
+      <div class="col">
+        <img src="../assets/img/producto3.jpg" alt="suero rojo" class="img-thumbnail imgTablas">
+        <p>Nuestro suero carmesí es para dolencias, si tienes algun dolor recurrente, artritis, etc.</p>
+      </div>
+      <div class="col">
+        <img src="../assets/img/producto4.jpg" alt="kit sueros" class="img-thumbnail imgTablas">
+        <p>¡Tambien puedes llevar nuestro kit completo! Juventud, salud y una mente despejada ¡Pruebalo!</p>
+      </div>
+    </section>
+    <section>
+      <div class="list-group listaGroup m-auto">
+        <div class="list-group-item list-group-item-action">
           <div class="d-flex w-50 justify-content-between">
-            <h5 class="mb-1">Cuerpo</h5>
+            <h5 class="mb-5">Cuerpo</h5>
           </div>
-          <p class="mb-1">Tenemos la solucion para /casi/ cualquier tipo de dolencia</p>
+          <p class="mb-5">Tenemos la solucion para /casi/ cualquier tipo de dolencia</p>
           <small>No olvide consultar a su médico ¡Seguro lo recomienda!</small>
         </div>
-        <a href="#" class="list-group-item list-group-item-action listaGroup">
+        <a href="#" class="list-group-item list-group-item-action">
           <div class="d-flex w-50 justify-content-between">
-            <h5 class="mb-1">Mente</h5>
+            <h5 class="mb-5">Mente</h5>
           </div>
-          <p class="mb-1">Una mente intranquila es un cuerpo enfermo.</p>
+          <p class="mb-5">Una mente intranquila es un cuerpo enfermo.</p>
           <small class="text-muted">La sobredosis puede causar dolores de cabeza.</small>
         </a>
-        <a href="#" class="list-group-item list-group-item-action listaGroup">
+        <a href="#" class="list-group-item list-group-item-action">
           <div class="d-flex w-50 justify-content-between">
-            <h5 class="mb-1">¡Para toda la familia!</h5>
+            <h5 class="mb-5">¡Para toda la familia!</h5>
           </div>
-          <p class="mb-1">Tu y tu familia pueden estar mucho mejor con nuestros suplementos diarios</p>
+          <p class="mb-5">Tu y tu familia pueden estar mucho mejor con nuestros suplementos diarios</p>
           <small class="text-muted">No testeado en menores de 6 años.</small>
         </a>
       </div>
+    </section>
   </main>
   <footer>
     <div class="linea">

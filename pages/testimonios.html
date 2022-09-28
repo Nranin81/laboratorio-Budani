@@ -11,7 +11,7 @@
   <!-- Link Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <!-- Mis estilos-->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Umbrella Corp</title>
 </head>
 <body>
@@ -47,7 +47,7 @@
       </h6>
     </section>
     <section class="tablasCentradas">
-      <table>
+      <table class="m-auto">
         <tr>
           <th><img src="../assets/img/persona3.jpg" alt="albert wesker" class="imagenesTestimonios"></th>
           <th><img src="../assets/img/persona1.jpg" alt="Mister X" class="imagenesTestimonios"></th>
@@ -61,7 +61,7 @@
       </table>
     </section>
     <h4>Trabajá con nosotros!</h4>
-    <form action="" class="col-lg-6 col-xs-3 formCentrado">
+    <form action="" class="col-lg-6 col-xs-3 formCentrado m-auto">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre completo</label>
         <input type="text" class="form-control" id="nombre" placeholder="Juan Perez">
@@ -75,9 +75,26 @@
         <textarea class="form-control" placeholder="Experiencia laboral" id="experienciaLaboral"></textarea>
         <label for="experienciaLaboral">Tu experiecia laboral</label>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#enviarForm">Enviar</button>
     </form>
   </main>
+  <!-- Modal -->
+  <div class="modal fade" id="enviarForm" tabindex="-1" aria-labelledby="enviarFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enviarFormLabel">¡Gracias por enviar tu CV!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Recibimos tus datos, una persona de recursos humanos evaluará tu perfil y se pondrá en contacto al e-mail que nos enviaste.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer>
     <div class="linea">
       <h6 class="textoFooter">Redes sociales</h6>
