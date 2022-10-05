@@ -1,28 +1,15 @@
 .seccionStars{
   background: $fondo_color;
-  .stars{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    &:hover{
-      color: #0000ff;
-    }
-  }
   .navStars{
     background-color: $colornav_stars;
-    padding: 1%;
-    div{
-      display: flex;
-      align-items: center;
-      img{
+    .estiloStar{
+      .icono{
         width: 50px;
         height: 50px;
       }
       .secciones{
-        justify-content: space-around;
-        padding: 10px;
         .nav-link{
           color: #beb618;
-          padding: 5px;
         }
       }
     }
@@ -30,7 +17,7 @@
   .divStars{
     border:  1px solid #193e8e;
     justify-items: center;
-    h3{
+    h2{
       font-family: $font_verdana;
       text-align: center;
       font-size: 2rem;
@@ -52,6 +39,26 @@
     iframe{
       width: 50vw;
       height: 80vh;
+    }
+  }
+  /* Map aplicado en los botones*/
+  .votacion{
+    justify-content: center;
+    .btn {
+      display: inline-block;
+      padding: .5em;
+      background: #ccc;
+      color: #666;
+       
+      @each $name, $colores in $boton {
+        $bgcolor: nth($colores, 1);
+        $fontcolor: nth($colores, 2);
+         
+        &--#{$name} {
+          background-color: $bgcolor;
+          color: $fontcolor;
+        }  
+      }
     }
   }
 }

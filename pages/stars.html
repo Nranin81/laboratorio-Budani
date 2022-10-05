@@ -16,35 +16,50 @@
 </head>
 <body class="seccionStars">
   <header>
-    <nav class="navStars">
-      <div>
+    <nav class="navbar navbar-expand-lg navStars">
+      <div class="container-fluid estiloStar">
         <a class="navbar-brand" href="./stars.html">
-          <img src="../assets/img/STARSlogo.png" alt="icono STARS">
+          <img class="icono" src="../assets/img/STARSlogo.png" alt="icono STARS">
         </a>
-        <div class="secciones">
-          <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-          <a class="nav-link" href="./nosotros.html">Nosotros</a>
-          <a class="nav-link" href="./productos.html">Productos</a>
-          <a class="nav-link active" href="./testimonios.html">Testimonios</a>
-          <a class="nav-link" href="./ciudadracoon.html">Racoon City</a>
-          <a class="nav-link" href="./stars.html">S.T.A.R.S</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto mb-2 mb-lg-0 secciones">
+            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            <a class="nav-link active" href="./productos.html">Productos</a>
+            <a class="nav-link" href="./testimonios.html">Testimonios</a>
+            <a class="nav-link" href="./ciudadracoon.html">Racoon City</a>
+            <a class="nav-link" href="./stars.html">S.T.A.R.S</a>
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
     <div class="divStars">
-      <h3>
+      <h2>
         Umbrella Corporation nos miente ¡Descubre la verdad!
-      </h3>
+      </h2>
       <p>
         Logramos entrar en la red de Umbrella para que aquellos que quieren descubrir la verdad puedan verla.
         El incidente de Racoon City es real, como los de España, Africa y Rumania.
       </p>
     </div>
     <div>
-      <iframe src="https://www.youtube.com/embed/QOKzmU5XOb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" src="https://www.youtube.com/embed/QOKzmU5XOb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <section class="votacion">
+      <p class="textoVotacion">¡Ayudanos! Esperamos que más gente nos escuche, por ello te pedimos votar: ¿Firmarias una petición 
+        para que se lleve a jucio publico a Umbrella Corporation?
+      </p>
+      <div class="botones">
+        <button type="button" class="btn btn--success"> Sí </button>
+        <button type="button" class="btn btn--error"> No </button>
+        <button type="button" class="btn btn--warning"> No sabe / No contesta </button>
+      </div>
+    </section>  
   </main>
   <footer>
 

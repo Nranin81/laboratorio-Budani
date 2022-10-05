@@ -3,9 +3,33 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*variables para reutilizar*/
 $fondo_color:#7eb6c5;
 $colornav_stars:#228585;
 $font_verdana: Verdana, Geneva, Tahoma, sans-serif;
+$cinco: 5px;
+
+/*mixin SASS*/
+@mixin flex-centrado{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+/* botones con map*/
+$boton: (
+  error: (#dd3535, #666),
+  success: (#5dd055, #fff),
+  warning: (#e1a449, #695757)
+);
+ 
 body{
   background-image: url('../assets/img/fondo.svg');
 }
@@ -65,36 +89,34 @@ a {
   text-align: center;
 }
 section.textoInicial {
-  transition: 2s;       
-}
-section.textoInicial:hover {
-  background-color: #e39c44;
+  transition: 2s;     
+  &:hover{
+    background-color: #e39c44;
+  }  
 }
 .imagenesCentro{
-  padding: 5px;
+  padding: $cinco;
   width: 30vw;
   height: 40vh;
+  &:hover{
+    transform: skew(5deg);
+  }
 }
-img.imagenesCentro:hover{
-  transform: skew(5deg);;
- 
-}
+
 .textoInicial{
   border: dashed 1px black; /* aplicar borde : estilo, grosor y color */
   font-family:$font_verdana; /*Otra tipografia/font */
 	font-size: 1rem; /* tamaño de letra */
 	overflow: hidden; /* ocultar excedente dado por el espacio que ocupa el contenido*/
   width: 100vw; /* ancho de tu div */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centrado;
 }
 p{
 	text-align: center;
 }
 .linea{
-  margin-top: 25px;
-  padding: 10px;
+  margin-top: 2rem;
+  padding: 1.5rem;
   border-top: solid 0.5px black;
   text-align: center;
 }
@@ -102,7 +124,7 @@ p{
   display: inline;
   font-family: $font_verdana;
   font-size: 1rem;
-  padding-top: 2px;
+  padding-top: 2rem;
 }
 .iconoRedes{
   width: 22px;
@@ -114,18 +136,32 @@ p{
   font-family: $font_verdana;
 }
 .estiloVideo{
-  text-align: center;
-  border: groove 0.5px white;
-  padding: 30px;
-  margin: 50px;
-  display: inline-block;
-}
-.textoLateral{
-  padding: 10px 20px 30px 10px;
-  font-style: normal;
-  font-size: 0.9rem;
-  display: inline;
-
+  border: groove 1px white;
+  padding: 3rem;
+  @include flex-nowrap;
+  justify-content: center;
+  .video{
+    width: 30vw;
+    height: 32vh;
+  }
+  .textoLateral{
+    width: 30vw;
+    margin: 3rem;
+    font-size: 1.2rem;
+    @include flex-nowrap;
+    border: dashed 1px black; 
+  }
+  a.stars{
+    font-family: $font_verdana;
+    font-size: 2rem;
+    align-content: center;
+    color:#224085;
+    background-color: #14dc8f;
+    border-radius: 15px;
+    &:hover{
+      color: #0000ff;
+    }
+  }
 }
 table{
   border: 2px solid black;
@@ -137,7 +173,7 @@ table{
   height: 22vh;
 }
 .tablasCentradas{
-  display: flex;
+  @include flex-centrado;
   padding-left: 4%;
 }
 .elementoCentrado{
@@ -150,15 +186,11 @@ table{
 }
 .imagenesProductos{
   width: 100vw;
-  padding: 15px 50px 5px 50px;
+  padding: 15px 50px $cinco 50px;
   height: 100vh;
 }
 .listaDesordenada{
   list-style: square inside;
-}
-.video{
-  width: 560px;
-  height: 315px;
 }
 .listaGroup{
   width: 50%;
@@ -168,55 +200,75 @@ table{
   width: 30%;
   height: 25%;
   display: flexbox;
-  flex-wrap: nowrap;
 }
 .col{
   float: left;
   padding: 10px;
+  img{
+    margin: 2%
+  }
 }
-.col img{
-  margin: 2%;
+/*div centrado para usar extend*/
+div{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 section.prod{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
+    @include flex-centrado;
+    align-items: center;
+    .col{
+      @extend div;
+    }
+  }
 
 @media only screen and (min-width:0px) and (max-width:576px){
   th{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   td{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   .tablasCentradas{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   .imagenesTestimonios{
     width: 28vw;
     height: 15vh;
   }
   .listMobile{
-    display: flex;
-    flex-wrap: nowrap;
+    @include flex-nowrap;
   }
-  .video{
-    width: 50vw;
-    height: 20vh;
+  .estiloVideo{
+    text-align: center;
+    border: groove 0.5px white;
+    padding: 3rem;
+    margin: 5rem;
+    @include flex-wrap;
+    .video{
+      width: 50vw;
+      height: 20vh;
+    }
+    .textoLateral{
+      font-size: 1.2rem;
+      @include flex-nowrap;
+    }
+    a.stars{
+      font-size: 2rem;
+      align-content: center;
+      color:#224085;
+      background-color: #14dc8f;
+      border-radius: 15px;
+    }
   }
   .formCentrado{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   .imgCentro{
     width: 75%;
     height: 75%;
     margin: 5%;
+    padding: 5rem;
   }
   .listaGroup{
     width: 100%;
@@ -226,40 +278,52 @@ section.prod{
     width: auto;
   }
   section.prod{
-    display: flex;
-    flex-wrap: nowrap;
+    @include flex-nowrap;
     flex-direction: column;
     justify-content: center;
   }
 }
 @media only screen and (min-width:576px) and (max-width:768px){
   th{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   td{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   .tablasCentradas{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   .imagenesTestimonios{
     width: 28vw;
     height: 15vh;
   }
   .listMobile{
-    display: flex;
-    flex-wrap: nowrap;
+    @include flex-nowrap;
   }
-  .video{
-    width: 50vw;
-    height: 20vh;
+  .estiloVideo{
+    text-align: center;
+    border: groove 0.5px white;
+    padding: 3rem;
+    margin: 5rem;
+    display: flexbox;
+    flex-wrap: wrap;
+    .video{
+      width: 50vw;
+      height: 20vh;
+    }
+    .textoLateral{
+      font-size: 1.2rem;
+    }
+    a.stars{
+      font-size: 2rem;
+      align-content: center;
+      color:#224085;
+      background-color: #14dc8f;
+      border-radius: 15px;
+    }
   }
   .formCentrado{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
   }
   .imgCentro{
     width: 75%;
@@ -282,14 +346,16 @@ section.prod{
     float: none;
     padding: 10px;
   }
-  .col img{
-    margin: 2%;
-  }
+  .col{
+    img{
+      margin: 2%;
+    } 
+  } 
   section.prod{
     display: grid;
     grid-template-columns: 1fr 1fr;  
     grid-row: repeat(4 1fr);
-    gap: 5px;
+    gap: $cinco;
     grid-template-areas: 
     "col col"
     "col col";
