@@ -1,0 +1,42 @@
+/*div centrado para usar extend*/
+.prod{
+  margin: 1rem;
+  .productos1{
+    @include flex-wrap;
+    justify-content: center;
+    .col{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: .5rem;
+      img{
+        width: 10vw;
+        height: 22vh;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+  .productos2{
+    @include flex-wrap;
+    justify-content: center;
+    .col{
+      margin: .5rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: 10vw;
+        height: 22vh;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+}
+.listaGroup{
+  width: 50vw;
+  height: 70vh;
+}

@@ -1,0 +1,40 @@
+.testimonios{
+  @include flex-centrado;
+  border: .5px solid black;
+  margin: 2rem;
+    .col{
+      @extend div;
+      border: 1px dotted black;
+      margin: .5rem;
+      .imagenesTestimonios{
+        width: 10vw;
+        height: 20vh;
+      }
+      p{
+        font-style: italic;
+      }
+      .peque{
+        font-size: small;
+        text-align: right;
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
+}
+.divForm{
+  @include flex-wrap;
+  justify-content: center;
+  .tituloForm{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .btnForm{
+    margin: 1%;
+    background-color: #6e2d6e;
+    color: #9195ad;
+    font-weight: bold;
+    &:hover{
+      background-color: #924cd3;
+    }
+  }
+}

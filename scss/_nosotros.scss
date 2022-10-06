@@ -1,0 +1,13 @@
+.textoInicial {
+    border: dashed 1px black; /* aplicar borde : estilo, grosor y color */
+    font-family:$font_verdana; /*Otra tipografia/font */
+    font-size: 1rem; /* tamaño de letra */
+    overflow: hidden; /* ocultar excedente dado por el espacio que ocupa el contenido*/
+    @include flex-centrado;
+    margin: 1rem;
+    padding: .5rem;
+    transition: 2s;     
+  &:hover{
+    background-color: #e39c44;
+  }  
+}

@@ -33,8 +33,13 @@ $boton: (
 body{
   background-image: url('../assets/img/fondo.svg');
 }
-/*importo una hoja de estilo con sass*/
+/*importo hojas de estilo con sass*/
 @import "stars";
+@import "testimonios";
+@import "ciudadRacoon";
+@import "productos";
+@import "nosotros";
+
 /* Importacion de tipografia */
 @font-face {
 	font-family: 'Alumni Sans Pinstripe', sans-serif;
@@ -72,10 +77,6 @@ h4{
   margin: 0 0.5rem;
   animation-duration: 5s; /* don't forget to set a duration! */
 }
-.secciones{
-  color: antiquewhite;
-  text-decoration: none;
-}
 .colorNavbar{
   background: #c7675e;
 }
@@ -83,284 +84,208 @@ a {
   text-decoration: none;
   color: #ee9323;
 }
-.boxImagenes{
-  padding-top: 2%;
-  padding-bottom: 3%;
-  text-align: center;
-}
-section.textoInicial {
-  transition: 2s;     
-  &:hover{
-    background-color: #e39c44;
-  }  
-}
-.imagenesCentro{
-  padding: $cinco;
-  width: 30vw;
-  height: 40vh;
-  &:hover{
-    transform: skew(5deg);
-  }
-}
 
-.textoInicial{
-  border: dashed 1px black; /* aplicar borde : estilo, grosor y color */
-  font-family:$font_verdana; /*Otra tipografia/font */
-	font-size: 1rem; /* tamaño de letra */
-	overflow: hidden; /* ocultar excedente dado por el espacio que ocupa el contenido*/
-  width: 100vw; /* ancho de tu div */
-  @include flex-centrado;
-}
-p{
-	text-align: center;
-}
 .linea{
   margin-top: 2rem;
   padding: 1.5rem;
   border-top: solid 0.5px black;
   text-align: center;
-}
-.textoFooter{
-  display: inline;
-  font-family: $font_verdana;
-  font-size: 1rem;
-  padding-top: 2rem;
-}
-.iconoRedes{
-  width: 22px;
-  height: 22px;
-}
-.texto{
-  font-size: 1rem;
-  padding: 5%;
-  font-family: $font_verdana;
-}
-.estiloVideo{
-  border: groove 1px white;
-  padding: 3rem;
-  @include flex-nowrap;
-  justify-content: center;
-  .video{
-    width: 30vw;
-    height: 32vh;
-  }
-  .textoLateral{
-    width: 30vw;
-    margin: 3rem;
-    font-size: 1.2rem;
-    @include flex-nowrap;
-    border: dashed 1px black; 
-  }
-  a.stars{
+  .textoFooter{
+    display: inline;
     font-family: $font_verdana;
-    font-size: 2rem;
-    align-content: center;
-    color:#224085;
-    background-color: #14dc8f;
-    border-radius: 15px;
-    &:hover{
-      color: #0000ff;
-    }
+    font-size: 1rem;
+    padding-top: 2rem;
+  }
+  .iconoRedes{
+    width: 22px;
+    height: 22px;
   }
 }
-table{
-  border: 2px solid black;
-  text-align: center;
-}
-.imagenesTestimonios{
-  width: 15vw;
-  padding: 5%;
-  height: 22vh;
-}
-.tablasCentradas{
-  @include flex-centrado;
-  padding-left: 4%;
-}
-.elementoCentrado{
-  text-align: center;
-}
-.imagenenMediana{
-  width: 400vw;
-  height: 300vh;
-  text-align: center;
-}
-.imagenesProductos{
-  width: 100vw;
-  padding: 15px 50px $cinco 50px;
-  height: 100vh;
-}
-.listaDesordenada{
-  list-style: square inside;
-}
-.listaGroup{
-  width: 50%;
-  padding: 5%;
-}
-.imgCentro{
-  width: 30%;
-  height: 25%;
-  display: flexbox;
-}
-.col{
-  float: left;
-  padding: 10px;
-  img{
-    margin: 2%
-  }
-}
-/*div centrado para usar extend*/
-div{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-section.prod{
-    @include flex-centrado;
-    align-items: center;
-    .col{
-      @extend div;
-    }
-  }
 
 @media only screen and (min-width:0px) and (max-width:576px){
-  th{
-    @include flex-wrap;
-  }
-  td{
-    @include flex-wrap;
-  }
-  .tablasCentradas{
-    @include flex-wrap;
-  }
-  .imagenesTestimonios{
-    width: 28vw;
-    height: 15vh;
-  }
-  .listMobile{
-    @include flex-nowrap;
-  }
-  .estiloVideo{
-    text-align: center;
-    border: groove 0.5px white;
-    padding: 3rem;
-    margin: 5rem;
-    @include flex-wrap;
-    .video{
-      width: 50vw;
-      height: 20vh;
-    }
-    .textoLateral{
-      font-size: 1.2rem;
-      @include flex-nowrap;
-    }
-    a.stars{
-      font-size: 2rem;
-      align-content: center;
-      color:#224085;
-      background-color: #14dc8f;
-      border-radius: 15px;
-    }
-  }
-  .formCentrado{
-    @include flex-wrap;
-  }
-  .imgCentro{
-    width: 75%;
-    height: 75%;
-    margin: 5%;
-    padding: 5rem;
-  }
-  .listaGroup{
-    width: 100%;
-  }
-  .texto{
-    text-align: center;
-    width: auto;
-  }
-  section.prod{
+  .testimonios{
     @include flex-nowrap;
     flex-direction: column;
     justify-content: center;
+    .col{
+      margin: .2rem;
+      width: 75%;
+      .imagenesTestimonios{
+        width: 15vw;
+        height: 10vh;
+      }
+    }
+  }
+  .estiloVideo{
+    padding: 3rem;
+    margin: 2.5rem;
+    @include flex-wrap;
+    .video{
+      width: 60vw;
+      height: 30vh;
+    }
+    .textoLateral{
+      font-size: 1rem;
+      @include flex-wrap;
+      margin: 1rem;
+      stars{
+        font-size: 2rem;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        color:#224085;
+        background-color: #14dc8f;
+        border-radius: 15px;
+      }
+    }
+  }
+  .boxImagenes{
+    .imgCentro{
+      width: 80vw;
+      height: 40vh;
+      margin: 0.5rem;
+    }
+  }
+  .divForm{
+    @include flex-wrap;
+    flex-direction: column;
+    .btnForm{
+      margin: 1rem;
+    }
+  }
+  .prod{
+    margin: 1rem;
+    @include flex-wrap;
+    .productos1{
+      @include flex-nowrap;
+      flex-direction: column;
+      justify-content: center;
+      .col{
+        margin: .5rem;
+        img{
+          width: 10vw;
+          height: 10vh;
+        }
+        p{
+          text-align: center;
+          overflow: auto;
+        }
+      }
+    }
+    .productos2{
+      @include flex-nowrap;
+      flex-direction: column;
+      .col{
+        margin: .5rem;
+        img{
+          width: 10vw;
+          height: 10vh;
+        }
+        p{
+          text-align: center;
+          overflow: auto;
+        }
+      }
+    }
+  }
+  .listaGroup{
+    width: 80vw;
+    height: 35vh;
   }
 }
 @media only screen and (min-width:576px) and (max-width:768px){
-  th{
-    @include flex-wrap;
-  }
-  td{
-    @include flex-wrap;
-  }
-  .tablasCentradas{
-    @include flex-wrap;
-  }
-  .imagenesTestimonios{
-    width: 28vw;
-    height: 15vh;
-  }
-  .listMobile{
+  .testimonios{
     @include flex-nowrap;
+    flex-direction: column;
+    justify-content: center;
+    .col{
+      margin: 1rem;
+      width: 75%;
+      .imagenesTestimonios{
+        width: 15vw;
+        height: 10vh;
+      }
+    }
   }
   .estiloVideo{
     text-align: center;
-    border: groove 0.5px white;
-    padding: 3rem;
-    margin: 5rem;
-    display: flexbox;
-    flex-wrap: wrap;
+    padding: .5rem;
+    margin: 1.5rem;
+    @include flex-wrap;
+    justify-content: center;
     .video{
-      width: 50vw;
-      height: 20vh;
+      width: 80vw;
+      height: 35vh;
     }
     .textoLateral{
       font-size: 1.2rem;
-    }
-    a.stars{
-      font-size: 2rem;
-      align-content: center;
-      color:#224085;
-      background-color: #14dc8f;
-      border-radius: 15px;
+      @include flex-wrap;
+      .stars{
+        font-size: 2rem;
+        margin: 2rem;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        color:#224085;
+        background-color: #14dc8f;
+        border-radius: 15px;
+      }
     }
   }
-  .formCentrado{
+  .boxImagenes{
     @include flex-wrap;
+    flex-direction: column;
+    .imgCentro{
+      padding: .5rem;
+      width: 80vw;
+      height: 60vh;
+    }
   }
-  .imgCentro{
-    width: 75%;
-    height: 75%;
+  .divForm{
+    @include flex-wrap;
+    flex-direction: column;
+    margin: 1.5rem;
+    .btnForm{
+      margin: 1rem;
+    }
+  }
+  .prod{
+    margin: 1rem;
+    @include flex-wrap;
+    .productos1{
+      @include flex-nowrap;
+      flex-direction: column;
+      justify-content: center;
+      .col{
+        margin: .5rem;
+        img{
+          width: 20vw;
+          height: 20vh;
+        }
+        p{
+          text-align: center;
+          overflow: auto;
+        }
+      }
+    }
+    .productos2{
+      @include flex-nowrap;
+      flex-direction: column;
+      .col{
+        margin: .5rem;
+        img{
+          width: 20vw;
+          height: 20vh;
+        }
+        p{
+          text-align: center;
+          overflow: auto;
+        }
+      }
+    }
   }
   .listaGroup{
-    width: 75%;
+    width: 80vw;
+    height: 35vh;
   }
-  .imgTablas{
-    width: 50%;
-  }
-  .texto{
-    text-align: center;
-    width: auto;
-  }
-  .listaGroup{
-    width: 75%;
-  }
-  .col{
-    float: none;
-    padding: 10px;
-  }
-  .col{
-    img{
-      margin: 2%;
-    } 
-  } 
-  section.prod{
-    display: grid;
-    grid-template-columns: 1fr 1fr;  
-    grid-row: repeat(4 1fr);
-    gap: $cinco;
-    grid-template-areas: 
-    "col col"
-    "col col";
-    justify-content: center;
-    align-items: center;
-  }
-  
 }

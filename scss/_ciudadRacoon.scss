@@ -1,0 +1,50 @@
+.texto{
+  font-size: 1rem;
+  padding: 5%;
+  font-family: $font_verdana;
+  font-weight: bold;
+  color: brown;
+}
+.boxImagenes{
+  padding: 1rem;
+  text-align: center;
+  .imgCentro{
+    width: 30vw;
+    height: 50vh;
+    display: flexbox;
+  }
+}
+.estiloVideo{
+  padding: 2em;
+  margin: 1rem;
+  @include flex-nowrap;
+  justify-content: center;
+  .video{
+    width: 30vw;
+    height: 30vh;
+  }
+  .textoLateral{
+    margin: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: groove 1px black; 
+    padding: .5rem;
+    @include flex-wrap;
+    justify-content: center;
+    .stars{
+      font-family: $font_verdana;
+      font-size: 2rem;
+      margin: 2rem;
+      padding: .5rem;
+      justify-content: center;
+      text-align: center;
+      color:#224085;
+      background-color: #14dc8f;
+      border-radius: 15px;
+      &:hover{
+        color: #7ea8b9;
+        background-color: #1b3773;
+      }
+    }
+  }
+}
