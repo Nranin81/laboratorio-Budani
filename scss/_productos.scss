@@ -37,6 +37,10 @@
   }
 }
 .listaGroup{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2rem;
   width: 50vw;
-  height: 70vh;
 }

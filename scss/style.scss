@@ -32,6 +32,8 @@ $boton: (
  
 body{
   background-image: url('../assets/img/fondo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*importo hojas de estilo con sass*/
 @import "stars";
@@ -164,7 +166,7 @@ a {
         margin: .5rem;
         img{
           width: 10vw;
-          height: 10vh;
+          height: 5vh;
         }
         p{
           text-align: center;
@@ -179,7 +181,7 @@ a {
         margin: .5rem;
         img{
           width: 10vw;
-          height: 10vh;
+          height: 5vh;
         }
         p{
           text-align: center;
@@ -189,8 +191,11 @@ a {
     }
   }
   .listaGroup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80vw;
-    height: 35vh;
+    height: fit-content;
   }
 }
 @media only screen and (min-width:576px) and (max-width:768px){
@@ -260,7 +265,7 @@ a {
         margin: .5rem;
         img{
           width: 20vw;
-          height: 20vh;
+          height: 15vh;
         }
         p{
           text-align: center;
@@ -275,7 +280,7 @@ a {
         margin: .5rem;
         img{
           width: 20vw;
-          height: 20vh;
+          height: 15vh;
         }
         p{
           text-align: center;
@@ -285,7 +290,10 @@ a {
     }
   }
   .listaGroup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80vw;
-    height: 35vh;
+    height: fit-content;
   }
 }

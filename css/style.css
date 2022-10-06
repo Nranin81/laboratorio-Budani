@@ -9,7 +9,9 @@
 /*mixin SASS*/
 /* botones con map*/
 body {
-  background-image: url("../assets/img/fondo.svg"); }
+  background-image: url("../assets/img/fondo.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*importo hojas de estilo con sass*/
 .seccionStars {
@@ -36,10 +38,10 @@ body {
       font-size: medium; }
       .seccionStars .divStars p:hover {
         color: #922626; }
-  .seccionStars div, .seccionStars .testimonios .col, .testimonios .seccionStars .col {
+  .seccionStars div {
     text-align: center;
     padding: 2%; }
-    .seccionStars div iframe, .seccionStars .testimonios .col iframe, .testimonios .seccionStars .col iframe {
+    .seccionStars div iframe {
       width: 50vw;
       height: 80vh; }
   .seccionStars .votacion {
@@ -67,7 +69,10 @@ body {
   margin: 2rem; }
   .testimonios .col {
     border: 1px dotted black;
-    margin: .5rem; }
+    margin: .5rem;
+    padding: .5rem;
+    text-align: center;
+    justify-content: center; }
     .testimonios .col .imagenesTestimonios {
       width: 10vw;
       height: 20vh; }
@@ -174,8 +179,12 @@ body {
         text-align: center; }
 
 .listaGroup {
-  width: 50vw;
-  height: 70vh; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2rem;
+  width: 50vw; }
 
 .textoInicial {
   border: dashed 1px black;
@@ -305,7 +314,7 @@ a {
         margin: .5rem; }
         .prod .productos1 .col img {
           width: 10vw;
-          height: 10vh; }
+          height: 5vh; }
         .prod .productos1 .col p {
           text-align: center;
           overflow: auto; }
@@ -317,13 +326,16 @@ a {
         margin: .5rem; }
         .prod .productos2 .col img {
           width: 10vw;
-          height: 10vh; }
+          height: 5vh; }
         .prod .productos2 .col p {
           text-align: center;
           overflow: auto; }
   .listaGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80vw;
-    height: 35vh; } }
+    height: fit-content; } }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .testimonios {
@@ -388,7 +400,7 @@ a {
         margin: .5rem; }
         .prod .productos1 .col img {
           width: 20vw;
-          height: 20vh; }
+          height: 15vh; }
         .prod .productos1 .col p {
           text-align: center;
           overflow: auto; }
@@ -400,10 +412,13 @@ a {
         margin: .5rem; }
         .prod .productos2 .col img {
           width: 20vw;
-          height: 20vh; }
+          height: 15vh; }
         .prod .productos2 .col p {
           text-align: center;
           overflow: auto; }
   .listaGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80vw;
-    height: 35vh; } }
+    height: fit-content; } }
