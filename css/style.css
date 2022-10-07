@@ -92,7 +92,7 @@ body {
     font-size: 1.5rem;
     text-align: center; }
   .divForm .btnForm {
-    margin: 1%;
+    margin: .5rem;
     background-color: #6e2d6e;
     color: #9195ad;
     font-weight: bold; }
@@ -131,6 +131,8 @@ body {
     padding: .5rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     justify-content: center; }
     .estiloVideo .textoLateral .stars {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -298,7 +300,8 @@ a {
   .divForm {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; }
+    flex-direction: column;
+    margin: .5rem; }
     .divForm .btnForm {
       margin: 1rem; }
   .prod {

@@ -31,6 +31,8 @@
     padding: .5rem;
     @include flex-wrap;
     justify-content: center;
+    text-align: center;
+    justify-content: center;
     .stars{
       font-family: $font_verdana;
       font-size: 2rem;

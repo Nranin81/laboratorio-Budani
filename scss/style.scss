@@ -151,6 +151,7 @@ a {
   .divForm{
     @include flex-wrap;
     flex-direction: column;
+    margin: .5rem;
     .btnForm{
       margin: 1rem;
     }

@@ -39,6 +39,7 @@
     </nav>
   </header>
   <main>
+    <!-- Video + texto lateral -->
     <section class="estiloVideo">
       <iframe class="video" src="https://www.youtube.com/embed/8cJTnz0PGyQ" title="YouTube video player" 
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -81,29 +82,31 @@
             <label for="email" class="form-label">Correo electronico</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="jperez@example.com">
           </div>
+          <label for="experienciaLaboral">Tu experiecia laboral</label>
           <div class="form-floating">
-            <label for="experienciaLaboral">Tu experiecia laboral</label>
-            <textarea class="form-control" placeholder="Experiencia laboral" id="experienciaLaboral"></textarea>
+            <textarea class="form-control" id="experienciaLaboral"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btnForm"data-bs-toggle="modal" data-bs-target="#enviarForm">Enviar</button>
+        <!-- boton "enviar" formulario -->
+        <button type="button" class="btn btn-primary btnForm" data-bs-toggle="modal" data-bs-target="#enviarModal">
+          Enviar
+        </button>
         </form>
       </div>
-    </div>
-    
+    </div> 
   </main>
-  <!-- Modal -->
-  <div class="modal fade" id="enviarForm" tabindex="-1" aria-labelledby="enviarFormLabel" aria-hidden="true">
+  <!-- Modal tras el "envío" del formulario -->
+  <div class="modal fade" id="enviarModal" tabindex="-1" aria-labelledby="enviarModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="enviarFormLabel">¡Gracias por enviar tu CV!</h5>
+          <h5 class="modal-title" id="enviarModalLabel">¡Gracias!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Recibimos tus datos, una persona de recursos humanos evaluará tu perfil y se pondrá en contacto al e-mail que nos enviaste.
+          Recibimos tu formulario, alguien de RRHH se comunicará contigo en breve ¡Revisa tu e-mail!
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
