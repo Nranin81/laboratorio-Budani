@@ -98,7 +98,7 @@ window.addEventListener("load", ()=>{
     }else if (opcion == '4'){
       suma = suma + 5500
     }else if (opcion == '5'){
-      suma = suma +13500
+      suma = suma + 13500
     }
     opcion = prompt(`Ingrese una opción o FINALIZAR para terminar: 
     1- Suero Amarillo $500 
