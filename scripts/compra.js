@@ -19,13 +19,13 @@ function cargarEventos() {
 }
 
 function procesarCompra() {
-    if (compra.obtenerProductosLocalStorage().length === 0) {
+    if (compra.obtenerProductosLocalStorage().length == 0) {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
             text: 'El carrito se encuentra vacío',
-            showConfirmButton: false,
-            timer: 2000
+            showConfirmButton: true,
+            timer: 3000
         }).then(function () {
             window.location = "productos.html";
         })
@@ -40,7 +40,7 @@ function procesarCompra() {
     }else {
         productosLS = compra.obtenerProductosLocalStorage()
         document.getElementById('procesar-pago')
-        .addEventListener('submit', function (event) {
+        .addEventListener('click', function (event) {
             event.preventDefault()
             Swal.fire({
                 type: 'success',

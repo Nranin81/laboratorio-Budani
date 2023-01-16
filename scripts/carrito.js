@@ -26,7 +26,7 @@ class Carrito {
 
     if(productosLS === infoProducto.id){
       Swal.fire({
-        type: 'info',
+        type: 'error',
         title: 'Atención',
         text: 'Producto agregado al carrito',
         showConfirmButton: true,
@@ -56,7 +56,7 @@ class Carrito {
 
   //Eliminar producto en el DOM
   eliminarProducto(e) {
-    e.preventDefault()
+    // e.preventDefault()
     let producto, productoID
     if (e.target.classList.contains('borrar-producto')) {
       e.target.parentElement.parentElement.remove()
@@ -65,6 +65,7 @@ class Carrito {
     }
     this.eliminarProductoLocalStorage(productoID)
     this.calcularTotal()
+    console.log(infoProducto)
   }
 
   //Elimina todos los productos
@@ -117,8 +118,10 @@ class Carrito {
   }
   leerLocalStorageCompra() {
     let productosLS
+    let contadorProductos = 0
     productosLS = this.obtenerProductosLocalStorage()
     productosLS.forEach (function (producto) {
+      contadorProductos = productosLS.length
       const row = document.createElement('tr')
       row.innerHTML = `
         <td>

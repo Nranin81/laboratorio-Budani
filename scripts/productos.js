@@ -10,6 +10,7 @@ const contadorCarrito = document.querySelector('.contarProductos')
 cargarEventos()
 
 function cargarEventos() {
+
 	// Se ejecuta cuando se presionar agregar carrito
 	productos.addEventListener("click", (e) => {
 		carro.comprarProducto(e)
