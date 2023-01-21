@@ -56,17 +56,17 @@ class Carrito {
 
   //Eliminar producto en el DOM
   eliminarProducto(e) {
-    // e.preventDefault()
+    e.preventDefault()
     let producto, productoID
     if (e.target.classList.contains('borrar-producto')) {
       e.target.parentElement.parentElement.remove()
       producto = e.target.parentElement.parentElement
-      productoID = producto.querySelector('a').getAttribute('data-id')
+      productoID = producto.querySelector('svg').getAttribute('data-id')
     }
+    console.log(productoID)
     this.eliminarProductoLocalStorage(productoID)
     this.calcularTotal()
-    console.log(infoProducto)
-  }
+    }
 
   //Elimina todos los productos
   vaciarCarrito(e) {
@@ -144,6 +144,7 @@ class Carrito {
   eliminarProductoLocalStorage(productoID){
     let productosLS
     productosLS = this.obtenerProductosLocalStorage()
+    console.log(productosLS)
     productosLS.forEach(function(productoLS, index) {
       if (productoLS.id === productoID) {
         productosLS.splice(index, 1)

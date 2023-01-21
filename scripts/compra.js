@@ -24,7 +24,7 @@ function procesarCompra() {
             type: 'error',
             title: 'Oops...',
             text: 'El carrito se encuentra vacío',
-            showConfirmButton: true,
+            showConfirmButton: false,
             timer: 3000
         }).then(function () {
             window.location = "productos.html";
